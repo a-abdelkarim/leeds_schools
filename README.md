@@ -4,7 +4,13 @@
 
 The **Leeds Schools Web App** is an interactive mapping application designed to visualize and filter school data in Leeds. The app provides an engaging interface for users to explore school information, apply various filters, and view detailed statistics and charts related to the schools.
 
+## Live Demo
+
+You can access the live version of the app here:  
+[Leeds Schools Web App](https://a-abdelkarim.github.io/leeds_schools/)
+
 ---
+
 
 ## Features
 
