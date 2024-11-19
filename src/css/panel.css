@@ -1,0 +1,641 @@
+.menu {
+    position: fixed;
+    top: -309px;
+    left: 26%;
+    width: 50%;
+    height: 320px;
+    overflow: auto;
+    -ms-overflow-style:none;
+    /* for Internet Explorer, Edge */
+    scrollbar-width: none;
+    border: 1px solid #184673;
+    border-radius: 0 0 20px 20px;
+    transition: top 0.5s ease; 
+    z-index: 999;
+    background: linear-gradient(rgb(4, 33, 38), rgba(7, 34, 38, 0.9), rgba(17, 43, 47, 0.9));
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(5, 48, 127,.6);
+    color: rgb(12, 9, 9) !important;
+}
+
+label {
+    color: white;
+}
+
+/* .menu::before,
+.menu::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #10bfef;
+    top: -1px;
+    animation: lightning 2s infinite;
+}
+
+.menu::before {
+    left: 0;
+}
+
+.menu::after {
+    right: 0;
+} */
+
+@keyframes lightning {
+    0% {
+        transform: scaleX(0);
+    }
+    50% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0); 
+    }
+}
+
+.menu.expanded {
+    top: 0; 
+}
+
+.menu-content {
+    padding: 0px;
+}
+
+.btn-toggle-menu {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    background-color: rgba(17, 43, 47, 0.9); 
+    transition: top 0.5s ease; 
+    /* transform: translateX(-50%); */
+    z-index: 1000;
+    border-radius: 0px 0px 10px 10px !important;
+    border: 0px !important;
+
+}
+
+.btn-toggle-menu.expanded {
+    position: fixed;
+    top: 320px;
+    left: 50%;
+    transition: all 0.5s ease;
+    background-color: #C1554E;
+    color: white;
+}
+
+/* Custom styling */
+.div_conteiner {
+    margin-bottom: 15px;
+}
+
+.lable_Sect {
+    font-weight: bold;
+}
+/* Additional styling */
+.form-control {
+    border-radius: 25px;
+}
+.btn-primary {
+    border-radius: 25px;
+}
+
+.btn-div {
+    text-align: center;
+}
+
+.sidePanelContainer {
+    position: fixed;
+    right: -590px;
+    top: 0px;
+    width: 600px;
+    height: 100vh;
+    overflow: auto;
+    background: linear-gradient(rgb(4, 33, 38), rgba(7, 34, 38, 0.9), rgba(17, 43, 47, 0.9)) !important;
+    border-radius: 25px 0px 0px 25px;
+    z-index: 10;
+    transition: right 0.8s ease;
+    color: white !important;
+    box-shadow: 0 15px 25px rgba(5, 48, 127,.6);
+}
+
+td {
+    color: black;
+}
+
+th {
+    color: black;
+}
+
+.sidePanelContainer.expanded {
+    right: 0px;
+}
+
+
+.btn-toggle-panel {
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    background-color: rgba(24, 90, 81, 0.9);
+    transition: right 0.8s ease;
+    /* transform: translateX(-50%); */
+    z-index: 1000;
+    border-radius: 10px 0px 0px 10px !important;
+    border: 0px !important;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(127, 5, 9, 0.6);
+    color: rgb(255, 255, 255) !important;
+
+}
+
+
+.btn-toggle-panel.expanded {
+    position: fixed;
+    /* top: 50px; */
+    right: 600px;
+    /* transition: all 0.5s ease; */
+    background-color: rgb(194, 69, 69);
+    color: white;
+}
+
+.card {
+    transition: all 0.2s ease;
+    border-radius: 20px;
+}
+
+.card:hover {
+    background-color: rgba(80, 197, 239, 0.5);
+    box-shadow: 0px 0px 10px rgb(63, 182, 180);
+}
+
+.card:active {
+    background-color: rgb(247, 245, 245);
+}
+
+
+#topMenuContainer{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btn-anim4 1s linear infinite;
+    animation-delay: .75s
+}
+
+@keyframes btn-anim4 {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+  
+
+/* CSS for fixed vertical divs */
+.vertical-div-container {
+    position: fixed;
+    top: 170px;
+    left: 20px;
+    width: 60px;
+    z-index: 5;
+}
+
+/* CSS for rounded divs */
+.rounded-div {
+    width: 100%;
+    height: 60px;
+    background-color: #f0f0f0; 
+    border-radius: 60px;
+    margin-bottom: 10px;
+    box-shadow: 0 5px 10px rgba(5, 48, 127, .4);
+}
+
+.rounded-div{
+    align-items: center;
+    background: #a39c9c;
+    border-radius: 106px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    margin: 10px;
+    background: rgba(120, 56, 3, 0.99);
+    color: white;
+    transition: all .5s ease;
+}
+
+.rounded-div {
+    cursor: pointer;
+}
+
+.rounded-div:hover {
+    background-color: rgba(6, 76, 167, 0.9);
+    color: #ebe9f4;
+}
+
+.rounded-div.active {
+    background-color: rgba(6, 76, 167, 0.9);
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: #100f15;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+a:hover {
+    color: #074281;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(4, 33, 38, 0.98);
+    transition: all 0.5s ease;
+    z-index: 999999999999999999;
+}
+
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #9370DB;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #BA55D3;
+    -webkit-animation: spin 3s linear infinite;
+    animation: spin 3s linear infinite;
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #FF00FF;
+    -webkit-animation: spin 1.5s linear infinite;
+    animation: spin 1.5s linear infinite;
+}
+
+@-webkit-keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+@keyframes spin {
+    0%   {
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.panel {
+    color: black !important;
+}
+
+.form-control{
+    box-shadow: 0px opx 5px rgb(8, 250, 213)  !important;
+}
+
+
+
+.hexagon {
+    position: absolute;
+    text-decoration: none;
+    filter: drop-shadow(-1px 6px 3px #37474F);
+    z-index: 9999999999999999999999999999999999999999;
+}
+  
+.hexagon__content {
+    width: 120px;
+    height: 120px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+    -webkit-clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    
+    box-shadow: 0 0 5px 0 #f00;
+    
+    font-family: 'Staatliches', cursive;
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0 0 1px #263238,
+      0 0 1px #263238,
+      0 0 1px #263238;
+    
+    cursor: pointer;
+}
+  
+.hexagon__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+  
+    filter: saturate(30%);
+    
+    transition: filter .5s ease-out,
+    transform .5s ease-out;
+    
+    z-index: -1;
+}
+  
+  .hexagon__content:hover .hexagon__background {
+    transform: scale(1.2);
+    filter: saturate(100%);
+  }
+
+.tab {
+    overflow: hidden;
+    /* border: 1px solid #3f3c3c; */
+    /* background-color: #f1f1f1; */
+    color: rgb(255, 255, 255);
+    display: flex;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.tab-button {
+    background-color: rgb(7, 34, 38);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    flex: 1; /* Use flex property to distribute space evenly */
+}
+
+.tab-button:hover {
+    background-color: #2f6f9c;
+}
+
+.tab-button.active {
+    background-color: #fffeff;
+    color: rgb(2, 2, 2);
+}
+
+.tab-content {
+    color: black;
+    margin-top: 2px;
+    overflow: auto;
+}
+
+#recommendation_value {
+    color: black;
+}
+
+
+.urlInput {
+    position: relative;
+  }
+  
+  .urlInput .form-control {
+    padding-right: 30px; /* Adjust based on the width of the suffix */
+  }
+  
+  .urlInput .urlCheck {
+    position: absolute;
+    top: 73%;
+    right: 28%; /* Adjust based on the distance you want the span from the right edge */
+    transform: translateY(-50%);
+    font-size: large;
+    display: none;
+    transition: all 0.2s ease;
+  }
+
+.panel {
+    background-color: #eff3f8;
+}
+
+.panel-primary {
+    border-radius: 10px !important;
+}
+
+.panel-heading {
+    background-color: #184673 !important;
+    border-radius: 10px !important;
+}
+
+.panel-heading a {
+    transition: all 0.3s ease !important;
+}
+
+.panel-heading a:hover{
+    text-decoration: none !important;
+    color: wheat;
+    text-shadow: 0 0 10px white;
+}
+
+.panel-footer {
+    border-radius: 10px !important;
+}
+
+
+@media (max-width: 751px ) {
+    .sidePanelContainer {
+        width: 100%;
+        border-radius: 0px;
+    }
+
+    .btn-toggle-panel {
+        right: 0px;
+    }
+
+    .btn-toggle-panel.expanded {
+        position: fixed;
+        top: 30px;
+        right: 0px;
+        /* transition: all 0.5s ease; */
+        background-color: rgb(194, 69, 69);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .btn-toggle-menu.expanded {
+        position: fixed;
+        top: 350px;
+        left: 50%;
+        transition: all 0.5s ease; /* Smooth transition effect */
+        background-color: #C1554E;
+        color: white;
+    }
+
+    .menu {
+        /* top: 0; */
+        left: 0;
+        width: 100%;
+    }
+    .menu.expanded {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-toggle-menu.expanded {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .card {
+        margin-bottom: 50px !important;
+    }
+    .card img {
+        width: 100px !important
+    }
+    
+}
+
+
+.scrollable-wrapper {
+    max-width: 100%; /* Ensure the wrapper takes up the full width */
+    overflow-x: auto; /* Allow horizontal scrolling when needed */
+    overflow-y: hidden; /* Hide vertical scrolling */
+}
+
+#searchByAllContent {
+    transition: all 0.3s ease !important;
+}
+
+.panel-default {
+    /* background: linear-gradient(rgb(4, 33, 38), rgba(7, 34, 38, 0.8), rgba(17, 43, 47, 0.8)) !important; */
+    /* background-color: transparent; */
+    background-color: rgba(255, 255, 255, 0);
+    /* opacity: 0.5; */
+    border: solid rgba(17, 43, 47, 0.8) 0.1px;
+}
+
+.panel-body {
+    border: none !important;
+    /* background-color: linear-gradient(rgb(4, 33, 38), rgba(7, 34, 38, 0.8), rgba(17, 43, 47, 0.8)) !important; */
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.panel-title {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 5px;
+}
+
+.panel-title input {
+    margin: 5px;
+}
+
+.panel-title div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+/* bottom panel */
+
+/* Styles for the bottom panel container */
+.bottomPanelContainer {
+    position: fixed;
+    bottom: -100vh;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: linear-gradient(rgb(4, 33, 38), rgba(7, 34, 38, 0.9), rgba(17, 43, 47, 0.9)) !important;
+    /* border-radius: 25px 0px 0px 25px; */
+    z-index: 999999999;
+    transition: all 0.8s ease;
+    color: white !important;
+    box-shadow: 0 15px 25px rgba(5, 48, 127,.6);
+  }
+  
+/* Styles for the toggle button */
+.btn-toggle-bottom-panel {
+    position: fixed;
+    left: 50%;
+    bottom: 5vh;
+    /* transition: all 0.5s ease; */
+    background-color: rgba(17, 43, 47, 0.9);
+    color: white;
+    z-index: 999999999;
+}
+  
+/* Styles for the bottom panel content */
+.bottomPanelContainer.expanded {
+    bottom: 0;
+  }
+
+.btn-toggle-bottom-panel.expanded {
+    left:0;
+    /* left: 0%; */
+    top: 0vh;
+    /* transition: all 0.5s ease; */
+    background-color: rgb(244, 74, 74);
+    color: rgb(255, 255, 255);
+    /* width: 30px; */
+    height: 35px;
+    border-radius: 0px;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.btn-toggle-bottom-panel.expanded:hover {
+    background-color: rgb(248, 27, 27);
+    box-shadow: 0 0 5px black;
+    color: white;
+}
+
+#dashboardFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

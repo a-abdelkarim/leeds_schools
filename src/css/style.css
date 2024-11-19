@@ -1,0 +1,9 @@
+/* Style the map container to occupy the remaining space */
+#viewDiv {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust as needed */
+    height: 100vh; /* Full height of the viewport */
+    z-index: 0; /* Make sure it's behind the side panel */
+}
