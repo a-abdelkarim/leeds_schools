@@ -370,3 +370,6 @@
     background-color: #eeecec;
   }
 
+.select2-container {
+  color: black !important;
+}
